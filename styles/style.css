@@ -1,5 +1,118 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+.theme-light, .theme-dark, .theme-auto{
+  overflow-x: hidden;
+}
 
 .page {
+  background-image: var(--bg-image);
+  background-attachment: fixed;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'IBM Plex mono';
+  padding: 0 10px;
+  margin: auto;
+  overflow: hidden;
+  box-sizing: border-box;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+}
+
+.header {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content 1fr;
+  block-size: 100vh;
+  
+}
+.header__record-icon {
+  color: var(--accent-color);
+  justify-self: end;
+  align-self: start;
+  display: flex;
+  position: absolute;
+  gap: 3px;
+  padding-block-start: 10px;
+  padding-inline-end: 28px;
+  font-size: 18px;
+}
+
+.header__record-icon::after {
+  content: url("/images/record-icon.svg");
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+  position: absolute;
+  padding: 2px;
+  height: 26px;
+  width: 26px;
+  top: 10px;
+  right: 0px;
+}
+
+.header__theme-menu {
+  display: flex;
+  justify-content: end;
+  padding-block-start: 75px;
+  margin-block-end: 65px;
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  color: var(--accent-color);
+  border: none;
+  text-transform: lowercase;
+  padding-inline-start: 13px;
+  padding-inline-end: 13px;
+  padding-block-start: 1.5px;
+  padding-block-end: 1.5px;
+  font-size: 18px;
+  
+}
+
+.header__theme-menu-item:not(:last-child){
+  margin-bottom: 10px;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--accent-color);
+}
+.title {
+  color: #DB00FF;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 83%;
+  display: flex;
+  align-self: flex-start;
+  
+  
+}
+.header__title {
+  text-shadow: 4px 4px 0 var(--accent-color);
+  
+}
+.title-decor {
+  background-color: var(--accent-color);
+  color: var(--text-dark);
+}
+
+.header__subtitle {
+  font-weight: 700;
+  font-size: 18px;
+  height: min-content;
+  margin-block-start: 55px;
+}
+.header__record-frame {
+  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color);
+  height: 20px;
+  width: 20px;
+
+}
+.content__link {
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.content__link:hover {
+  text-decoration: underline;
+}
+
+.content__link:focus {
+  border: 1px solid #fff;
 }
