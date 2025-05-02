@@ -4,6 +4,8 @@
 */
 :root {
   --accent-color: #FF0070;
-  --text-dark: #000028;
+  --theme-main-color: #000028;
   --bg-image: url("../images/cover-image-dark.png");
+  --main-text-size: 18px;
+
 }

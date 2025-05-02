@@ -1,26 +1,21 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-.theme-light, .theme-dark, .theme-auto{
-  overflow-x: hidden;
-}
 
 .page {
-  background-image: var(--bg-image);
+  /*background-image: var(--bg-image);*/
   background-attachment: fixed;
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
   font-family: 'IBM Plex mono';
-  padding: 0 10px;
   margin: auto;
-  overflow: hidden;
-  box-sizing: border-box;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
 
 .header {
   display: grid;
-  grid-template-rows: min-content 1fr min-content 1fr;
+  grid-template-rows: 1fr min-content 1fr;
   block-size: 100vh;
+  padding: 0 10px;
   
 }
 .header__record-icon {
@@ -29,22 +24,16 @@
   align-self: start;
   display: flex;
   position: absolute;
-  gap: 3px;
-  padding-block-start: 10px;
-  padding-inline-end: 28px;
-  font-size: 18px;
+  gap: 5px;
+  top: 12px;
+  right: 8px;
+  font-size: var(--main-text-size);
 }
 
 .header__record-icon::after {
   content: url("/images/record-icon.svg");
-  border-block-start: 1px solid var(--accent-color);
-  border-inline-end: 1px solid var(--accent-color);
-  position: absolute;
-  padding: 2px;
   height: 26px;
-  width: 26px;
-  top: 10px;
-  right: 0px;
+  width: 26px;  
 }
 
 .header__theme-menu {
@@ -63,7 +52,7 @@
   padding-inline-end: 13px;
   padding-block-start: 1.5px;
   padding-block-end: 1.5px;
-  font-size: 18px;
+  font-size: var(--main-text-size);
   
 }
 
@@ -78,33 +67,70 @@
   color: #DB00FF;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
-  display: flex;
-  align-self: flex-start;
-  
-  
 }
 .header__title {
   text-shadow: 4px 4px 0 var(--accent-color);
+  display: flex;
+  align-self: flex-start;
   
 }
 .title-decor {
   background-color: var(--accent-color);
-  color: var(--text-dark);
+  color: var(--theme-main-color);
+  font-size: var(--main-text-size);
+  margin: 0;
+  padding: 0;
 }
 
 .header__subtitle {
   font-weight: 700;
-  font-size: 18px;
   height: min-content;
   margin-block-start: 55px;
 }
-.header__record-frame {
+.record-frame {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  
+}
+.record-frame-bottom {
   border-block-end: 1px solid var(--accent-color);
   border-inline-start: 1px solid var(--accent-color);
-  height: 20px;
-  width: 20px;
-
+  bottom: 10px;
+  left: 10px;
 }
+
+.record-frame-top {
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+  top: 10px;
+  right: 10px;
+}
+
+.content {
+  background-color: var(--theme-main-color);
+  padding: 40px 10px 40px 10px;
+  display: grid;
+  gap: 50px;
+}
+.content__section {
+  display: grid;
+  gap: 20px;
+}
+
+.content__heading {
+  color: var(--accent-color);
+  font-size: var(--main-text-size);
+}
+
+.content__card {
+  font-size: var(--main-text-size);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  line-height: 23.4px;
+}
+
 .content__link {
   text-shadow: 2px 2px 0 var(--accent-color);
 }
@@ -115,4 +141,32 @@
 
 .content__link:focus {
   border: 1px solid #fff;
+}
+
+.section__title-advice {
+  font-weight: 400;
+}
+
+.gallery {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+}
+
+.gallery__image {
+  width: 100vw;
+  max-width: 355px;
+  height: auto;
+  object-fit: contain;
+  
+}
+
+.footer {
+  block-size: 100vh;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: var(--theme-main-color);
 }
