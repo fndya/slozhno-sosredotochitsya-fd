@@ -8,6 +8,7 @@
   background-repeat: no-repeat;
   font-family: 'IBM Plex mono';
   margin: auto;
+  color: var(--text-color);
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
 
@@ -15,9 +16,10 @@
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   block-size: 100vh;
+  min-block-size: 668px;
   padding: var(--page-padding) var(--page-padding);
-  
 }
+
 .header__record-icon {
   color: var(--accent-color);
   justify-self: end;
@@ -56,18 +58,26 @@
   padding-inline-end: 13px;
   padding-block-start: 1.5px;
   padding-block-end: 1.5px;
-  font-size: var(--main-text-size);
-  
+  font-size: var(--main-text-size);  
 }
 
+.header__theme-menu-button:hover {
+  border: 1px solid #660045;
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--accent-color);
+}
 
 .header__theme-menu-button_active {
   outline: 1px solid var(--accent-color);
 }
 
 .title {
-  color: #DB00FF;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--title-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem); 
   line-height: 83%;
 }
 
@@ -75,7 +85,6 @@
   text-shadow: 4px 4px 0 var(--accent-color);
   display: flex;
   align-self: flex-start;
-  
 }
 .title-decor {
   background-color: var(--accent-color);
@@ -90,12 +99,13 @@
   height: min-content;
   margin-block-start: 55px;
 }
+
 .record-frame {
   position: absolute;
   height: 25px;
-  width: 25px;
-  
+  width: 25px;  
 }
+
 .record-frame-bottom {
   border-block-end: 1px solid var(--accent-color);
   border-inline-start: 1px solid var(--accent-color);
@@ -111,11 +121,12 @@
 }
 
 .content {
-  background-color: var(--theme-main-color);
+  background-color: var(--bg-color);
   padding: 40px var(--page-padding) 40px var(--page-padding);
   display: grid;
   gap: 50px;
 }
+
 .content__section {
   display: grid;
   gap: 20px;
@@ -143,13 +154,15 @@
 
 .content__link {
   text-shadow: 2px 2px 0 var(--accent-color);
+  text-decoration: none;
 }
 
 .content__link:hover {
   text-decoration: underline;
 }
 
-.content__link:focus {
+.content__link:focus-visible {
+  outline: none;
   border: 1px solid #fff;
 }
 
@@ -167,12 +180,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  
-  
 }
 
 .footer {
   block-size: 100vh;
+  min-block-size: 668px;
   padding: 0 var(--page-padding);
   display: flex;
   align-items: center;
@@ -189,16 +201,21 @@
   :root {
     --page-padding: 20px;
   }
+
   .header__record-icon {
     top: 22px;
     right: 18px;
+  }
+
+  .title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header__title {
     margin-inline-start: -20px;
   }
 
-  .header__theme-menu {
+  .header__theme-menu-list {
     align-items: center;
   }
 
@@ -208,13 +225,16 @@
     justify-self: end;
     width: 50%;
   }
+
   .content {
     gap: 80px;
     padding: 60px var(--page-padding) 60px var(--page-padding);
   }
+
   .content__section {
     grid-template-columns: 1fr 2fr;
   }
+
   .content__heading{
     grid-column: span 1;
     grid-row: 1 / 3;
@@ -236,6 +256,7 @@
   .content__section-advice .content__heading {
     grid-row: 1 / 7;
   }
+
   .content__section-advice .content__subheading {
     grid-column: 2 / 3;
     grid-row: span 1;
@@ -245,6 +266,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-auto-flow: dense;
   }
+
   .gallery h2 {
     grid-column: span 3;
   }
@@ -276,9 +298,6 @@
 }
 
 @media (width >= 1024px ) {
-  .title {
-    font-size: 157px;
-  }
   .header__theme-menu {
     align-self: start;
     justify-self: center;
@@ -290,6 +309,7 @@
   .content__section {
     grid-template-columns: repeat(3,1fr);
   }
+
   .content__card {
     grid-column: span 2;
   }
@@ -308,7 +328,4 @@
     grid-column: 2 / 4;
     grid-row: span 1;
   }
-
-  
-
 }

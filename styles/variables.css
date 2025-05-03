@@ -5,8 +5,10 @@
 :root {
   --accent-color: #FF0070;
   --theme-main-color: #000028;
+  --bg-color: #000028;
+  --title-color: #DB00FF;
+  --text-color: #F1B2CE;
   --bg-image: url("../images/cover-image-dark.png");
   --main-text-size: 18px;
   --page-padding: 10px;
-
 }
