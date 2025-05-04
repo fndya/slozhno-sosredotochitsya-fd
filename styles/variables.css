@@ -8,6 +8,9 @@
   --bg-color: #000028;
   --title-color: #DB00FF;
   --text-color: #F1B2CE;
+  --menu-color: var(--accent-color);
+  --heading-color: var(--accent-color);
+  --record-frame-color: var(--accent-color);
   --bg-image: url("../images/cover-image-dark.png");
   --main-text-size: 18px;
   --page-padding: 10px;

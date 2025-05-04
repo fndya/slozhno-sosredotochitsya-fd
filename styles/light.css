@@ -11,6 +11,10 @@
   */
   --accent-color: #ff8dcb;
   --theme-main-color: #353430;
+  --menu-color: var(--theme-main-color);
+  --text-color: var(--theme-main-color);
+  --heading-color: var(--theme-main-color);
+  --record-frame-color:var(--theme-main-color);
   --bg-image: url("../images/cover-image-light.png");
   --title-color: #FFC2E6;
   --bg-color: #fff1f7;
@@ -22,32 +26,8 @@
     display: none;
   }
   
-  .header__theme-menu-button {
-    color: var(--theme-main-color);
-  }
-  
   .header__theme-menu-button:hover {
     border: 1px solid rgb(50 49 45 / 0.4);
-  }
-
-  .header__theme-menu-button:focus-visible {
-    border-bottom: 1px solid var(--theme-main-color)
-  }
-
-  .header__theme-menu-button_active {
-    border: 1px solid var(--theme-main-color);
-  }
-  
-  .content {
-    color: var(--theme-main-color);
-  }
-  
-  .content__link:focus-visible {
-    border: 1px solid var(--theme-main-color);
-  }
-  
-  .content__heading {
-    color: var(--theme-main-color);
   }
 
   .footer__title {
