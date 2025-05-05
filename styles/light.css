@@ -20,18 +20,16 @@
   --bg-color: #fff1f7;
 }
 
-.theme-light .page{
-  
-  .header__record-icon {
+  .theme-light .page .header__record-icon {
     display: none;
   }
   
-  .header__theme-menu-button:hover {
+  .theme-light .page .header__theme-menu-button:hover {
     border: 1px solid rgb(50 49 45 / 0.4);
   }
 
-  .footer__title {
+  .theme-light .page .footer__title {
     text-shadow: 2px 2px 0 #ff0070;
   }
-}
+
 

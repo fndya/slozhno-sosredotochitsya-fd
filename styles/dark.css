@@ -20,7 +20,34 @@
   --bg-image: url("../images/cover-image-dark.png");
 }
 
-.theme-dark .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
-  
+
+/* Вам также нужно будет написать ряд подобных селекторов */
+.theme-dark .page .header__record-icon {
+  color: var(--accent-color);
+  justify-self: end;
+  align-self: start;
+  display: flex;
+  position: absolute;
+  gap: 10px;
+  top: 10px;
+  right: 19px;
+  font-size: var(--main-text-size);
 }
+
+.theme-dark .page .header__record-icon::after {
+  content: " ";
+  align-self: center;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+}
+
+@media (width >= 768px) {
+  .theme-dark .page .header__record-icon {
+    top: 20px;
+    right: 29px;
+  }
+}
+
