@@ -1,10 +1,10 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  background-image: var(--bg-image);
   background-color: var(--bg-color);
+  background-image: var(--bg-image);
   background-attachment: fixed;
-  background-position: center top;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   font-family: 'IBM Plex mono', sans-serif;
@@ -129,7 +129,6 @@
 }
 
 .content {
-  background-color: var(--bg-color);
   padding: 40px var(--page-padding) 40px var(--page-padding);
   display: grid;
   gap: 50px;
@@ -198,7 +197,6 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  background-color: var(--bg-color);
 }
 
 .footer__title {
@@ -337,75 +335,5 @@
   .content__section-advice .content__subheading {
     grid-column: 2 / 4;
     grid-row: span 1;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --accent-color: #FF0070;
-    --theme-main-color: #000028;
-    --bg-color: #000028;
-    --title-color: #DB00FF;
-    --text-color: #F1B2CE;
-    --menu-color: var(--accent-color);
-    --heading-color: var(--accent-color);
-    --record-frame-color: var(--accent-color);
-    --bg-image: url("../images/cover-image-dark.png");
-  }
-
-  .page .header__record-icon {
-    color: var(--accent-color);
-    justify-self: end;
-    align-self: start;
-    display: flex;
-    position: absolute;
-    gap: 10px;
-    top: 10px;
-    right: 19px;
-    font-size: var(--main-text-size);
-  }
-
-  .page .header__record-icon::after {
-    content: " ";
-    align-self: center;
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    background: var(--accent-color);
-    box-shadow: 0px 0px 4px 2px var(--accent-color);
-  }
-}
-
-@media (prefers-color-scheme: dark) and (width >= 768px) {
-  .page .header__record-icon {
-    top: 20px;
-    right: 29px;
-  }
-}
-
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --accent-color: #ff8dcb;
-    --theme-main-color: #353430;
-    --menu-color: var(--theme-main-color);
-    --text-color: var(--theme-main-color);
-    --heading-color: var(--theme-main-color);
-    --record-frame-color: var(--theme-main-color);
-    --bg-image: url("../images/cover-image-light.png");
-    --title-color: #FFC2E6;
-    --bg-color: #fff1f7;
-  }
-
-  .page .header__record-icon {
-    display: none;
-  }
-
-  .page .header__theme-menu-button:hover {
-    border: 1px solid rgb(50 49 45 / 0.4);
-  }
-
-  .page .footer__title {
-    text-shadow: 2px 2px 0 #ff0070;
   }
 }

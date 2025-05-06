@@ -20,16 +20,32 @@
   --bg-color: #fff1f7;
 }
 
-  .theme-light .page .header__record-icon {
+.theme-light .page .header__record-icon {
+  display: none;
+}
+
+.theme-light .page .header__theme-menu-button:hover {
+  border: 1px solid rgb(50 49 45 / 0.4);
+}
+
+.theme-light .page .footer__title {
+  text-shadow: 2px 2px 0 #ff0070;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: #ff8dcb;
+    --theme-main-color: #353430;
+    --menu-color: var(--theme-main-color);
+    --text-color: var(--theme-main-color);
+    --heading-color: var(--theme-main-color);
+    --record-frame-color: var(--theme-main-color);
+    --bg-image: url("../images/cover-image-light.png");
+    --title-color: #FFC2E6;
+    --bg-color: #fff1f7;
+  }
+
+  .page .header__record-icon {
     display: none;
   }
-  
-  .theme-light .page .header__theme-menu-button:hover {
-    border: 1px solid rgb(50 49 45 / 0.4);
-  }
-
-  .theme-light .page .footer__title {
-    text-shadow: 2px 2px 0 #ff0070;
-  }
-
-
+}
