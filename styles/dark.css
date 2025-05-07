@@ -18,6 +18,7 @@
   --heading-color: var(--accent-color);
   --record-frame-color: var(--accent-color);
   --bg-image: url("../images/cover-image-dark.png");
+  --hover-color: #660045;
 }
 
 

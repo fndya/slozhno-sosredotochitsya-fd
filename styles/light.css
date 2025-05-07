@@ -18,14 +18,11 @@
   --bg-image: url("../images/cover-image-light.png");
   --title-color: #FFC2E6;
   --bg-color: #fff1f7;
+  --hover-color: #ada5a6;
 }
 
 .theme-light .page .header__record-icon {
   display: none;
-}
-
-.theme-light .page .header__theme-menu-button:hover {
-  border: 1px solid rgb(50 49 45 / 0.4);
 }
 
 .theme-light .page .footer__title {
@@ -43,6 +40,7 @@
     --bg-image: url("../images/cover-image-light.png");
     --title-color: #FFC2E6;
     --bg-color: #fff1f7;
+    --hover-color: #ada5a6;
   }
 
   .page .header__record-icon {
